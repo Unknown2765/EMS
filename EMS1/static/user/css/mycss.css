@@ -1,0 +1,158 @@
+Reset basic styles
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    text-align: center;
+    color: white;
+  }
+  
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  /* .header-content a {
+    background-color: #ff6f61;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+   .header-content a:hover {
+    background: #388e3c;
+  }
+   */
+  .logout-btn {
+    color: white;
+    background: #ff5e57;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+  
+  .logout-btn:hover {
+    background: #e04b46;
+  }
+  
+  /* Glass Form Container */
+  main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+  
+  .glass-form {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 2rem;
+    border-radius: 16px;
+    max-width: 500px;
+    width: 100%;
+    color: white;
+    backdrop-filter: blur(10px);
+    text-align: center;
+  }
+  
+  .glass-form input,
+  .glass-form textarea {
+    width: 95%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    background: rgba(255, 255, 255, 0.3);
+    color: #000;
+  }
+  
+  .glass-form h2 {
+    margin-bottom: 1.5rem;
+  }
+  
+  .glass-form input::placeholder,
+  .glass-form textarea::placeholder {
+    color: #333;
+  }
+  
+  .glass-form button {
+    background-color: #ff6f61;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .glass-form button:hover {
+    background: #388e3c;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    color: white;
+    font-size: 0.9rem;
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .glass-form {
+      padding: 1rem;
+    }
+  
+    .glass-form h2 {
+      font-size: 1.25rem;
+    }
+  }
+  
+
+  /* .floating-label {
+  position: relative;
+  margin-bottom: 20px;
+}
+.floating-label input {
+  width: 250px;
+  padding: 12px 10px 12px 10px;
+  font-size: 16px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  outline: none;
+}
+.floating-label label {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: white;
+  padding: 0 5px;
+  color: #aaa;
+  transition: 0.2s ease all;
+  pointer-events: none;
+}
+.floating-label input:focus + label,
+.floating-label input:not(:placeholder-shown) + label {
+  top: -8px;
+  left: 10px;
+  font-size: 12px;
+  color: #007BFF;
+} */

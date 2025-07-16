@@ -1,0 +1,43 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Home Page</title>
+    <link rel="stylesheet" href="{% static 'user/css/mycss.css' %}">
+</head>
+<body>
+   <header>
+  <div class="header-content">
+    <h1>Email Management System</h1>
+    <h3>  Welcome, {{ user.first_name }}</h3>
+    <a href= "{% url 'logout' %}" class="logout-btn">Logout</a>
+  </div>
+</header>
+
+  <main>
+    <div class="glass-form">
+      <h2>Send Email</h2>
+      {% if messages %}
+      <ul>
+        {% for message in messages %}
+        <li {% if message.tags %}class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+      <form method="post" action="{% url 'email_sender' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="email" name="to_email" placeholder="Recipient Email" required>
+        <input type="text" name="subject" placeholder="Subject" required>
+        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+        <input type="file" name="attachment" accept=".png, .jpg, .jpeg, .pdf" />
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Email Management System | Developed by Shlok</p>
+  </footer>
+</body>
+</html>
